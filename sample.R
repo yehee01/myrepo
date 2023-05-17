@@ -1,6 +1,3 @@
-## 1. Empirical (Simulation-based) solution
-
-
 num_sim <- 10^3
 
 set.seed(1)
@@ -28,6 +25,3 @@ mean(res)
 
 sd(res)
 # [1] 108.3179
-
-curve(N/x + x*(N/x)*(1-(1-p)^x), xlab="number in pool (k)",
-      ylab="expected number", from=2, to=10)
