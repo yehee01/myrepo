@@ -12,7 +12,7 @@ N <- n*k   # total number of people
 # (A)의 검사 수: N = n*k
 
 # (B) 방식
-# (b) 방식식
+
 res <- numeric(num_sim)
 
 for(i in 1:num_sim) {
