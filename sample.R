@@ -1,5 +1,6 @@
 ## 1. Empirical (Simulation-based) solution
 
+
 num_sim <- 10^3
 
 set.seed(1)
