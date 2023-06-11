@@ -194,6 +194,16 @@ disparity_rate <- read_html(url) %>%
   html_table() %>% 
   as.data.frame()
 
+
+# 괴리율 박스플롯 그리기
+disparity_rate$괴리율 <- as.numeric(gsub("%", "", disparity_rate$괴리율))
+boxplot(disparity_rate$괴리율)
+boxplot(disparity_rate$괴리율)$stats
+
+# 괴리율이 -180.1 이하인 이상치 제거 후 박스플롯 그리기
+boxplot(disparity_rate$괴리율)
+
+
 ## 괴리율 상위 125개의 종목들을 살펴보았을 때 외국인비율 상위 100에 해당하는 우선주들은 상위 60안에 해당하였다. 
 ## 외국인 비율 상위 100위에 해당하는 삼성전자우, LG우를 제외한 나머지 우선주들은 괴리율이 50~60%에 해당한다.
 ## 독일의 평균 괴리율 3.5%, 미국의 평균 괴리율 10~20%에 비해 매우 높은 괴리율을 보이고 있다.
