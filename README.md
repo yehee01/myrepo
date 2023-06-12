@@ -61,6 +61,14 @@
   따라서 위 두 개의 B가 붙어있는 우선주는 채권과 같은 성격의 주식으로 무조건 배당이 이루어져야 한다. 
 - 신형우선주: 1995년 상법개정이후 발행된 우선주 (개정상법에 따라 최저배당률 제도 도입)  
   => 채권처럼 최소한 보장된 수준의 배당을 지급해야 한다.
+### 네이버증권 외국인보유 우선주 데이터프레임
+![image](https://github.com/yehee01/myrepo/assets/126887695/df7f08c2-7ea5-4286-9632-bf3519eb055a)
+
+### 외국인보유 우선주 중 아모레퍼시픽, 아모레G, LG 생활건강 동일업종 비교 데이터프레임
+![image](https://github.com/yehee01/myrepo/assets/126887695/8ca7ad60-165e-4a30-ade7-41f248b5b712)
+
+### 우선주 괴리율 사이트
+https://koreadividend.kr/disparity/
 
 #### 괴리율 이상치 제거 전 박스플롯 최저, 사분위수, 최대
 ![image](https://github.com/yehee01/myrepo/assets/126887695/d4cebe7d-e7fd-4fe6-ad75-bd8eca0e29c6)
