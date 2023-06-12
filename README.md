@@ -70,6 +70,10 @@
 ### 우선주 괴리율 사이트
 https://koreadividend.kr/disparity/
 
+### 우선주 괴리율 데이터프레임
+![image](https://github.com/yehee01/myrepo/assets/126887695/98f22d1e-e465-4713-82ab-c699bb6007f9)
+![image](https://github.com/yehee01/myrepo/assets/126887695/5f47509d-3656-4ef6-8a61-6e5f3840cce5)
+
 #### 괴리율 이상치 제거 전 박스플롯 최저, 사분위수, 최대
 ![image](https://github.com/yehee01/myrepo/assets/126887695/d4cebe7d-e7fd-4fe6-ad75-bd8eca0e29c6)
 
