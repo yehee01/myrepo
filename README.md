@@ -85,7 +85,7 @@ https://koreadividend.kr/disparity/
 - 괴리율이 마이너스인 종목은 우선주의 주가가 보통주의 주가보다 높은 것을 의미한다.
     - 이는 보통주보다 가격이 싼 우선주에 대한 관심이 높아지고 해당 기업의 호재가 더불어져 거래량이 적은 우선주의 가격이 급등했다고 볼 수 있다.
 
-#### 괴리율 박스플롯 결과(원데이터-위, 로그 변환 데이터-아래)
+#### 괴리율 박스플롯 결과(원데이터-왼쪽, 로그 변환 데이터-오른쪽)
 ![image](https://github.com/yehee01/myrepo/assets/126887695/7b4c8dc0-a208-4604-a715-3ffe1988fa00)
 ![image](https://github.com/yehee01/myrepo/assets/126887695/e2d8cb43-e206-4cb9-a102-81d1ff5f1e8c)
 
