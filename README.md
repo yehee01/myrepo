@@ -54,7 +54,7 @@ https://koreadividend.kr/disparity/
 ![image](https://github.com/yehee01/myrepo/assets/126887695/5f47509d-3656-4ef6-8a61-6e5f3840cce5)
 
 ###
--  괴리율 상위 125개의 종목들을 살펴보았을 때 외국인비율 상위 100에 해당하는 우선주들은 상위 60안에 해당하였다. 
+-  괴리율 상위 125개의 종목들을 살펴보았을 때 외국인비율 상위 100위에 해당하는 우선주들은 상위 60안에 해당하였다. 
    외국인 비율 상위 100위에 해당하는 삼성전자우, LG우를 제외한 나머지 우선주들은 괴리율이 50~60%에 해당한다.
 - 독일의 평균 괴리율 3.5%, 미국의 평균 괴리율 10~20%에 비해 매우 높은 괴리율을 보이고 있다.
   이는 우리나라의 우선주가 저평가되어있음을 말한다.
@@ -66,7 +66,8 @@ https://koreadividend.kr/disparity/
 
 #### 괴리율 박스플롯 최저, 사분위수, 최대(원데이터-왼쪽, 로그 변환 데이터-오른쪽)
 ![image](https://github.com/yehee01/myrepo/assets/126887695/d4cebe7d-e7fd-4fe6-ad75-bd8eca0e29c6)
-![image](https://github.com/yehee01/myrepo/assets/126887695/01beca9f-84a8-4553-b1f0-b917078cece2)
+![image](https://github.com/yehee01/myrepo/assets/126887695/e0d05154-49c6-414b-9651-3d0465a8d25f)
+
 - 삼성전자우, LG우를 제외한 나머지 외국인비율이 높은 우선주들은 상위 25%에 해당하는 우선주들에 해당한다.
 
 #### 괴리율 박스플롯 결과(원데이터-왼쪽, 로그 변환 데이터-오른쪽)
