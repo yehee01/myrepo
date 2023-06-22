@@ -43,15 +43,21 @@
    배당가능이익  = (순자산액) - (자본금액) - (해당 결산기까지 적립된 자본준비금과 이익준비금의 합계액) - (해당 결산기에 적립하여야 할 이익준비금) - (대통령령으로 정하                    는 미실현이익)
 
 ⏵ROE(자기자본이익률) : 보통주를 보유한 주주의 관점에서 측정한 수익성. 우선주 자본금을 차감한 자기자본과 우선주 배당금을 제외한 당기순자 동일업종 비교 데이터프레임
-![image](https://github.com/yehee01/myrepo/assets/126887695/d1912625-313c-469a-b9fa-70316fad6861)
+
+### 외국인비율이 높은 우선주 중 하나인 LG전자 동일업종 비교 데이터프레임 
+----------
+![image](https://github.com/yehee01/myrepo/assets/126887695/2014c1c9-5dee-4fe8-b764-85d3b3f3192a)
+
 
 
 ### 우선주 괴리율 사이트
 https://koreadividend.kr/disparity/
 
 ### 우선주 괴리율 데이터프레임
-![image](https://github.com/yehee01/myrepo/assets/126887695/98f22d1e-e465-4713-82ab-c699bb6007f9)
-![image](https://github.com/yehee01/myrepo/assets/126887695/5f47509d-3656-4ef6-8a61-6e5f3840cce5)
+![image](https://github.com/yehee01/myrepo/assets/126887695/bba0a63f-dc0b-44da-8456-fdd9694470e0)
+![image](https://github.com/yehee01/myrepo/assets/126887695/bdf4ccff-eb94-4463-af40-3400c2337c31)
+![image](https://github.com/yehee01/myrepo/assets/126887695/2ad95dc2-a53a-40c9-9d14-37447922683e)
+
 
 ###
 -  괴리율 상위 125개의 종목들을 살펴보았을 때 외국인비율 상위 100위에 해당하는 우선주들은 상위 60안에 해당하였다. 
