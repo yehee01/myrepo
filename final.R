@@ -109,16 +109,29 @@ url <- "https://finance.naver.com/item/main.naver?code=005935"
 samsung_ind <- read_html(url, encoding = 'euc-kr') %>% 
   html_table() %>% 
   .[[5]] %>% 
-  as.data.frame()
+  t() %>% 
+  as.data.frame() 
+colnames(samsung_ind) <- samsung_ind[1,]
+samsung_ind <- samsung_ind %>% rownames_to_column() %>%
+  .[-1,]
+colnames(samsung_ind)[1] <- '종목명'
+rownames(samsung_ind) = NULL
 
 ## 시가총액, 매출액, 영업이익, 조정영업이익, 당기순이익 동일업종보다 크다.
+
 
 # LG생활건강우, 아모레퍼시픽우, 아모레G우 분석
 url <- "https://finance.naver.com/item/main.naver?code=051905"
 LGlife_ind <- read_html(url, encoding = 'euc-kr') %>% 
   html_table()  %>% 
   .[[5]] %>% 
+  t() %>% 
   as.data.frame()
+colnames(LGlife_ind) <- LGlife_ind[1,]
+LGlife_ind <- LGlife_ind %>% rownames_to_column() %>%
+  .[-1,]
+colnames(LGlife_ind)[1] <- '종목명'
+rownames(LGlife_ind) = NULL
 
 ## 보통주보다 우선주가 외국인비율이 높은 동일업종: 아모레퍼시픽, 아모레G
 ## LG생활건강이 동일업종보다 시가총액, 매출액, 영업이익, 조정영업이익, 주당순이익, ROE이 가장 크다.
@@ -133,7 +146,7 @@ beauty_ind <- read_html(url, encoding = 'euc-kr') %>%
   .[[3]] %>% 
   as.data.frame(.)
 
-beauty_ind <- beauty_ind[-1, -c(10:12)]
+beauty_ind <- beauty_ind[-c(1,63,64), -c(10:12)]
 
 ## LG생활건강, 아모레퍼시픽, 아모레G는 모두 시가총액, 매출액, 영업이익, 당기순이익, 주당순이익이 동일업종에서 큰 쪽에 속한다.
 
@@ -142,7 +155,14 @@ url <- "https://finance.naver.com/item/main.naver?code=051915"
 LGchemi_ind <- read_html(url, encoding = 'euc-kr') %>% 
   html_table()  %>% 
   .[[5]] %>% 
+  t() %>% 
   as.data.frame()
+
+colnames(LGchemi_ind) <- LGchemi_ind[1,]
+LGchemi_ind <- LGchemi_ind %>% rownames_to_column() %>%
+  .[-1,]
+colnames(LGchemi_ind)[1] <- '종목명'
+rownames(LGchemi_ind) = NULL
 
 ## 동일업종보다 시가총액, 매출액, 영업이익, 조정영업이익, 당기순이이익, 주당순이익이 크다.
 
@@ -151,7 +171,15 @@ url <- "https://finance.naver.com/item/main.naver?code=005387"
 heundai_ind <- read_html(url, encoding = 'euc-kr') %>% 
   html_table()  %>% 
   .[[5]] %>% 
+  t() %>% 
   as.data.frame()
+
+colnames(heundai_ind) <- heundai_ind[1,]
+heundai_ind <- heundai_ind %>% rownames_to_column() %>%
+  .[-1,]
+colnames(heundai_ind)[1] <- '종목명'
+rownames(heundai_ind) = NULL
+
 
 ## 동일업종보다 시가총액, 매출액, 영업이익, 조정영업이익, 당기순이익, 주당순이익, PER이 크다.
 
@@ -160,7 +188,14 @@ url <- "https://finance.naver.com/item/main.naver?code=003925"
 namyang_ind <- read_html(url, encoding = 'euc-kr') %>% 
   html_table()  %>% 
   .[[5]] %>% 
+  t() %>% 
   as.data.frame()
+
+colnames(namyang_ind) <- namyang_ind[1,]
+namyang_ind <- namyang_ind %>% rownames_to_column() %>%
+  .[-1,]
+colnames(namyang_ind)[1] <- '종목명'
+rownames(namyang_ind) = NULL  
 
 ## CJ 제일제당은 매출액, 영업이익, 조정영업이익이 가장 높고,
 ## 남양유업은 영업이익증가율이 가장 높았다.
@@ -170,7 +205,14 @@ url <- "https://finance.naver.com/item/main.naver?code=066575"
 LGformer_ind <- read_html(url, encoding = 'euc-kr') %>% 
   html_table()  %>% 
   .[[5]] %>% 
+  t() %>% 
   as.data.frame()
+
+colnames(LGformer_ind) <- LGformer_ind[1,]
+LGformer_ind <- LGformer_ind %>% rownames_to_column() %>%
+  .[-1,]
+colnames(LGformer_ind)[1] <- '종목명'
+rownames(LGformer_ind) = NULL 
 
 ## 시가총액, 매출액, 영업이익, 영업조정이익, 당기순이익, 주당순이익, PBR이 동일업종보다 크다.
 
@@ -179,7 +221,14 @@ url <- "https://finance.naver.com/item/main.naver?code=003555"
 LG_ind <- read_html(url, encoding = 'euc-kr') %>% 
   html_table()  %>% 
   .[[5]] %>% 
+  t() %>% 
   as.data.frame()
+
+colnames(LG_ind) <- LG_ind[1,]
+LG_ind <- LG_ind %>% rownames_to_column() %>%
+  .[-1,]
+colnames(LG_ind)[1] <- '종목명'
+rownames(LG_ind) = NULL 
 
 ## 영업이익증가율, 당기순이익, 주당순이익, ROE, PBR이 동일업종보다 크다.
 
@@ -194,15 +243,21 @@ disparity_rate <- read_html(url) %>%
   html_table() %>% 
   as.data.frame()
 
-
 # 괴리율 박스플롯 그리기
 disparity_rate$괴리율 <- as.numeric(gsub("%", "", disparity_rate$괴리율))
-boxplot(disparity_rate$괴리율)
+boxplot(disparity_rate$괴리율, ylim = c(-2300, 80))
 boxplot(disparity_rate$괴리율)$stats
 
-# 괴리율이 -180.1 이하인 이상치 제거 후 박스플롯 그리기
-boxplot(disparity_rate$괴리율)
+# 괴리율이 마이너스인 종목은 우선주의 주가가 보통주의 주가보다 높은 것을 의미한다.
+# 이는 보통주보다 가격이 싼 우선주에 대한 관심이 높아지고 해당 기업의 호재가 더불어져 거래량이 적은 우선주의 가격이 급등했다고 볼 수 있다.
+# 괴리율이 마이너스인 종목 중 sk넥트웍스의 경우 보통주의 현재가가 5070원이고, 우선주의 현재가는 44,400원이다.
+# 괴리율을 계산해보면 -7.76%에 해당한다.(6월 22일 기준)
 
+# 괴리율 로그 변환 후 박스플롯 그리기
+disparity_rate$로그_괴리율 <- log(disparity_rate$괴리율)
+
+boxplot(log(disparity_rate$괴리율))
+boxplot(log(disparity_rate$괴리율))$stats  
 
 ## 괴리율 상위 125개의 종목들을 살펴보았을 때 외국인비율 상위 100에 해당하는 우선주들은 상위 60안에 해당하였다. 
 ## 외국인 비율 상위 100위에 해당하는 삼성전자우, LG우를 제외한 나머지 우선주들은 괴리율이 50~60%에 해당한다.
@@ -211,3 +266,16 @@ boxplot(disparity_rate$괴리율)
 ## 특히 삼성전자우의 경우 시가총액이 현대차와 LG전자와 같은 다른 기업의 보통주의 시가총액보다 큰 편이고 
 ## 변동성이 작아 비교적 다른 우선주들에 비해 안정적이어서 의결권이 없고 우선주의 시세변동이 크다는 단점을 보완하고 
 ## 배당수익률이 높다는 장점이 있어 우선주 중에서 외국인 비율이 삼성전자 보통주(52.52%)보다 훨씬 높은 것으로 보인다.
+
+# 데이터프레임 csv 파일로 저장
+write.csv(beauty_ind, "myrepo/cosmetics.csv")
+write.csv(disparity_rate, "myrepo/disparity.csv")
+write.csv(foreign_own_prefer, "myrepo/foreign_preferred_stock.csv")
+write.csv(foreign_same, "myrepo/foreign_prefer_same_stock.csv")
+write.csv(heundai_ind, "myrepo/car_heundai.csv")
+write.csv(LG_ind, "myrepo/conglomerate_LG.csv")
+write.csv(LGchemi_ind, "myrepo/chemistry_LGchemi.csv")
+write.csv(LGformer_ind, "myrepo/electornic_products_LGformer.csv")
+write.csv(namyang_ind, "myrepo/food_namyang.csv")
+write.csv(samsung_ind, "myrepo/semiconductor_samsung.csv")
+write.csv(stock_prefer, "myrepo/preferred_stock.csv")
